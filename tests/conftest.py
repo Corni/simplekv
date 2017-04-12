@@ -33,7 +33,7 @@ def long_value(request):
 # keys are always strings. only ascii chars are allowed
 @pytest.fixture(params=[u'short_key', u'different_key',
                         """'!"`#$%&'()+,-.<=>?@[]^_{}~'""", 'some key with space',
-                        'some key with  two consecutive spaces', u'unicode key with spaces'])
+                        'some key with  two consecutive spaces', u'unicode key with spaces äöü'])
 def key(request):
     return request.param
 
